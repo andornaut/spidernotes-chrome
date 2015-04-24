@@ -1,0 +1,15 @@
+<form class="query">
+    <div><input tabindex="4" name="query" type="text"
+                 placeholder="Search your notes" value="{{query}}"><i
+            class="fa fa-times" title="Clear"></i><button
+            tabindex="6" name="search" type="submit" class="btn-primary"
+            title="Search"><i class="fa fa-search"></i></button></div>
+</form>
+
+<div class="results"></div>
+
+{{#if hasMore}}
+    <button name="more" title="Show more notes" class="btn"><i
+            class="fa fa-arrow-circle-down"></i> More
+    </button>
+{{/if}}

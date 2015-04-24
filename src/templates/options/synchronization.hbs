@@ -1,0 +1,47 @@
+<h2>Synchronization</h2>
+
+{{#if isSynchronized}}
+    <p><b>Your notes are synced</b> when you're
+        <a href="https://support.google.com/chrome/bin/answer.py?hl=en&answer=165139" target="_blank">signed in to
+            Chrome</a>. You can also sync by connecting to your Social Login account.</p>
+
+    {{#if isConnected}}
+        <p><span class="profile {{provider}}">{{#if email}}{{email}}{{else}}{{#if name}}{{name}}{{else}}{{provider}}{{/if}}{{/if}}</span> <a
+                href="#" class="disconnect">Disconnect</a>
+        </p>
+    {{else}}
+        <form class="facebook" method="get" action="{{urls.facebook}}" method="post">
+            <button type="submit" title="Connect SpiderNotes to your Facebook account"></button>
+        </form>
+
+        <form class="google" method="get" action="{{urls.google}}" method="post">
+            <button type="submit" title="Connect SpiderNotes to your Google account"></button>
+        </form>
+
+        <form class="windows_live" method="get" action="{{urls.microsoft}}" method="post">
+            <button type="submit" title="Connect SpiderNotes to your Microsoft account"></button>
+        </form>
+
+        <form class="twitter" method="get" action="{{urls.twitter}}" method="post">
+            <button type="submit"
+                    title="Connect SpiderNotes to your Twitter account"></button>
+        </form>
+
+        <form class="yahoo" method="get" action="{{urls.yahoo}}" method="post">
+            <input type="hidden" name="identity_url" value="me.yahoo.com"/>
+            <button type="submit" title="Connect SpiderNotes to your Yahoo! account"></button>
+        </form>
+    {{/if}}
+
+    <p>
+        <button type="button" name="disable" class="btn">Disable synchronization</button>
+    </p>
+{{else}}
+    <p>Your notes are not synced with other devices.</p>
+
+    <p>
+        <button type="button" name="enable" class="btn btn-primary">
+            <i class="fa fa-cloud"></i> Enable synchronization
+        </button>
+    </p>
+{{/if}}

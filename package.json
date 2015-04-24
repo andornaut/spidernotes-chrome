@@ -1,0 +1,54 @@
+{
+  "author": "andornaut",
+  "browserify": {
+    "extensions": [
+      "hbs"
+    ],
+    "transform": [
+      "hbsfy"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/andornaut/spidernotes-chrome/issues"
+  },
+  "dependencies": {
+    "backbone": "^1.1.2",
+    "backbone-indexeddb": "git+ssh://git@github.com:superfeedr/indexeddb-backbonejs-adapter.git",
+    "backbone.layoutmanager": "^0.9.6",
+    "handlebars": "^3.0.1",
+    "jquery": "^2.1.3",
+    "sjcl": "^1.0.2",
+    "underscore": "^1.8.3"
+  },
+  "description": "Notes in your browser: Private, Synchronized, Secure.",
+  "devDependencies": {
+    "browserify": "^9.0.8",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-if": "^1.2.5",
+    "gulp-imagemin": "^2.2.1",
+    "gulp-jsdoc": "^0.1.4",
+    "gulp-minify-css": "^1.0.0",
+    "gulp-replace": "^0.5.3",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.0.2",
+    "gulp-zip": "^3.0.2",
+    "hbsfy": "^2.2.1",
+    "jsdoc": "^3.3.0-beta3",
+    "run-sequence": "^1.0.2",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "homepage": "https://spidernotes.com",
+  "license": "MIT",
+  "main": "src/app/index.js",
+  "name": "spidernotes-chrome",
+  "private": "true",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andornaut/spidernotes-chrome.git"
+  },
+  "version": "1.0.0"
+}

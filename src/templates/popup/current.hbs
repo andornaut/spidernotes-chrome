@@ -1,0 +1,14 @@
+<a href="" class="toggle-maximize" title="Expand/shrink the search pane">
+    <i class="fa {{toggleIconClass}}"></i>
+</a>
+<div class="query">
+    <h2>{{query}}</h2>
+</div>
+
+<div class="results"></div>
+
+{{#if hasMore}}
+    <button name="more" title="Show more notes" class="btn"><i
+            class="fa fa-arrow-circle-down"></i> More
+    </button>
+{{/if}}

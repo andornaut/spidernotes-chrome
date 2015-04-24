@@ -1,0 +1,316 @@
+@import url(base.css);
+
+BODY {
+    background-color: #FBEEA5;
+    font-size: 14px;
+    width: 720px;
+}
+
+ARTICLE {
+    border-bottom: 3px solid #F8E48C;
+    margin-bottom: 22px;
+    padding: 0 10px 22px;
+    position: relative;
+}
+
+ARTICLE:last-child {
+    border-bottom-width: 0;
+    margin-bottom: 0;
+}
+
+ARTICLE .fa-times {
+    border: 1px solid #F6DC73;
+    color: #F6DC73;
+    margin-left: 0;
+    padding: 1px 2px;
+    position: absolute;
+    right: 11px;
+    top: -19px;
+}
+
+ARTICLE P {
+    margin: 10px 0 0 0;
+    padding: 0 0 0 5px;
+    word-break: break-all;
+}
+
+ARTICLE P:first-of-type {
+    margin-top: 15px;
+}
+
+ARTICLE P:last-of-type {
+    margin-bottom: 0;
+}
+
+ARTICLE P.resize {
+    display: none;
+    margin-top: 0;
+    text-align: right;
+}
+
+ARTICLE P.resize A {
+    background-color: #F8E48C;
+    border-radius: 1px;
+    color: #E1B450;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 6px 6px 6px;
+    text-decoration: none;
+}
+
+ARTICLE P.resize A.fa-chevron-up {
+    font-size: 10px;
+    font-weight: normal;
+    padding: 4px 8px 2px 8px;
+}
+
+ARTICLE PRE {
+    cursor: pointer;
+    font-family: "Lucida Grande", "Segoe UI", "Droid Sans", "Liberation Sans", arial, sans-serif;
+    line-height: 16px; /* Used by the preferences.searchLines setting. */
+    margin: 0;
+    padding: 0 5px;
+    overflow: hidden;
+    white-space: pre-wrap;
+}
+
+ARTICLE SPAN {
+    background-color: #F6DC73;
+    border-radius: 8px;
+    color: #336699;
+    cursor: pointer;
+    padding: 2px 6px;
+}
+
+NAV A {
+    color: black;
+    text-decoration: none;
+}
+
+NAV A {
+    margin-right: 10px;
+}
+
+NAV A:last-of-type {
+    margin-right: 0;
+}
+
+NAV A.encryption-toggle.encrypted {
+    color: #33AA44;
+}
+
+NAV DIV {
+    margin: 12px 0;
+}
+
+NAV DIV:first-of-type {
+    float: left;
+}
+
+NAV DIV:last-of-type {
+    float: right;
+}
+
+NAV I {
+    vertical-align: bottom;
+}
+
+INPUT[type=text] {
+    box-sizing: border-box;
+    padding-right: 20px;
+    width: 100%;
+}
+
+TEXTAREA {
+    box-sizing: border-box;
+    font-family: monospace;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 3px 5px;
+    resize: vertical;
+    vertical-align: top;
+    width: 100%;
+}
+
+TIME {
+    color: #666;
+    float: right;
+}
+
+#encryption H2 {
+    display: none;
+}
+
+#encryption FORM {
+    background-color: #FBEEA5;
+    border-bottom: 1px solid #BBB;
+    display: none;
+    padding: 10px 16px;
+}
+
+#edit {
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #BBB;
+    padding: 0 16px;
+}
+
+#edit P:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+}
+
+#edit P:last-of-type A,
+TIME {
+    display: inline-block;
+    margin-top: 7px;
+}
+
+#list {
+    display: flex;
+}
+
+.query {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#current {
+    background-color: #FCF5C8;
+}
+
+#current > DIV {
+    width: 360px;
+}
+
+#current .query {
+    background-color: #F8E48C;
+    height: 40px;
+}
+
+#current .query H2 {
+    font-size: 18px;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+}
+
+#current .results::before {
+    content: '';
+    display: block;
+    border-top: 15px solid #F8E48C;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    margin: 0 auto 12px;
+    width: 0;
+}
+
+#search {
+    background-color: #FBEEA5;
+    flex: 1;
+    min-height: 100px;
+}
+
+#search .query {
+    margin-bottom: 14px;
+    padding: 10px 40px 14px 10px;
+}
+
+#search .query DIV {
+    background-color: #FFF;
+    border: 1px solid #999;
+    border-right: 0 none;
+}
+
+#search .query DIV INPUT {
+    border: 0 none;
+    font-size: 16px;
+    padding: 4px;
+}
+
+#search .query DIV BUTTON {
+    border: 1px solid #5088DD;
+    border-radius: 0 3px 3px 0;
+    margin: -1px -29px -1px 7px;
+    padding: 6px 7px 5px 7px;
+}
+
+#list BUTTON.btn {
+    background-color: inherit;
+    border: 1px solid #E1B450;
+    color: #E1B450;
+    display: block;
+    margin: 0 auto;
+    outline-color: #E1B450;
+}
+
+#list BUTTON[name=more].btn {
+    margin-bottom: 20px;
+}
+
+.fa-link,
+.fa-times {
+    color: #888;
+    cursor: pointer;
+    margin-left: -18px;
+}
+
+BODY.popout {
+    background-color: #666666;
+    max-width: 960px;
+    margin: 0 auto;
+    width: inherit;
+}
+
+.popout ARTICLE P.resize,
+.popout NAV A.popup,
+.popout #current {
+    display: none;
+}
+
+#current DIV.maximized {
+    margin-left: 12px;
+    width: 30px;
+}
+
+#list .maximized BUTTON.btn,
+.maximized .results {
+    display: none;
+}
+
+.maximized H2 {
+    visibility: hidden;
+}
+
+.toggle-maximize {
+    color: #E1B450;
+    cursor: e-resize;
+    font-size: 18px;
+    line-height: 100%;
+    padding: 11px 8px 11px 0;
+    position: absolute;
+}
+
+.maximized .toggle-maximize {
+    cursor: w-resize;
+    margin-left: -10px;
+}
+
+.maximized::before {
+    content: '';
+    border-right: 20px solid #F8E48C;
+    border-top: 20px solid #FBEEA5;
+    border-bottom: 20px solid transparent;
+    margin-left: -20px;
+    position: absolute;
+    width: 0;
+}
+
+.split::before {
+    content: '';
+    border-left: 20px solid #FBEEA5;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    position: absolute;
+    width: 0;
+}

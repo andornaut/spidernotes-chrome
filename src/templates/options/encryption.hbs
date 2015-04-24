@@ -1,0 +1,34 @@
+<h2>Encryption</h2>
+
+{{#if isEncryptionEnabled}}
+    <p><b>Your notes are encrypted</b>.</p>
+
+    <p class="password">
+        <input type="password" placeholder="New password" required /><button type="submit" name="enable" class="btn btn-primary">
+            <i class="fa fa-lock"></i> Change password
+        </button><button name="disable" class="btn">
+            Disable encryption
+        </button>
+    </p>
+{{else}}
+    <p>Your notes are not encrypted.</p>
+
+    <p class="password">
+        <input type="password" placeholder="Password" required /><button type="submit" name="enable" class="btn btn-primary">
+            <i class="fa fa-lock"></i> Encrypt
+        </button>
+    </p>
+{{/if}}
+
+{{#if numUndecryptable}}
+    <p>
+        <button name="delete_undecryptable" class="btn btn-danger">
+            Delete {{numUndecryptable}} un-readable notes
+        </button>
+    </p>
+
+    <p>{{numUndecryptable}} of your notes are encrypted and un-readable. Please enter the password that you originally
+        used to encrypt them.</p>
+{{/if}}
+
+<a class="close" href="#">Close</a>

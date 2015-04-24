@@ -1,0 +1,42 @@
+<nav>
+    <div>
+        <a href="#" class="encryption-toggle {{#if isEncryptionEnabled}} encrypted{{/if}}"
+           title="Show/hide encryption options">
+            <i class="fa fa-lock"></i>
+        </a>
+        <a href="/options.html" target="_blank">Options</a>
+        </div>
+    <div>
+        <a href="/popout.html" target="_blank" class="popup" title="Pop-out">
+            <i class="fa fa-external-link"></i>
+        </a>
+        <a href="#" title="Expand/shrink editor" class="resize">
+            <i class="fa {{resizeClass}}"></i>
+        </a>
+    </div>
+</nav>
+
+<form name="edit">
+    <p>
+        <textarea tabindex="1" name="body" rows="{{editorLines}}" maxlength="50000" autofocus>{{body}}</textarea>
+    </p>
+
+    <p>
+        <input tabindex="2" name="url" type="text" maxlength="1000" placeholder="Web-addresses and/or tags" value="{{url}}"><i
+            class="fa fa-times" title="Clear"></i>
+    </p>
+
+    <p>
+        <button tabindex="3" name="save" type="submit" class="btn btn-primary">
+        {{~#if id}}Save{{else}}Add{{/if~}}
+        </button><button tabindex="4" name="discard" type="button" class="btn">Discard</button>
+        {{~#if id}}<button tabindex="5" name="delete" type="button" class="btn btn-danger">Delete</button>{{/if}}
+        {{~#if show_undo_delete ~}}
+        <a href="#" class="undo-delete">Undo delete</a>
+        {{~/if}}
+        {{~#if show_undo_discard ~}}
+        <a href="#" class="undo-discard">Undo discard</a>
+        {{~/if~}}
+        {{#if modified}}<time title="Last modified" datetime="{{modified}}">{{modifiedHuman}}</time>{{/if}}
+    </p>
+</form>

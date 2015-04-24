@@ -1,0 +1,25 @@
+<i class="fa fa-times" title="Delete"></i>
+{{#if isDeleted}}
+    <button class="btn">Undo delete</button>
+{{else}}
+    <pre class="body" style="max-height: {{height}}px;"
+         title="Edit">{{#if body}}{{linkify body}}{{else}}[Click here to edit]{{/if}}</pre>
+    <p class="resize">
+        <a class="fa" title="Expand" href="#">...</a>
+    </p>
+    {{#if urls}}
+    <p class="urls">
+    {{#each urls}}
+        {{~#unless @first}}<br/>{{/unless~}}
+        <a href="{{url}}" title="Navigate">{{urlHuman}}</a>
+    {{/each}}
+    </p>
+    {{/if}}
+    {{#if tags}}
+    <p class="tags">
+    {{#each tags}}
+        <span title="Search">{{this}}</span>
+    {{/each}}
+    </p>
+    {{/if}}
+{{/if}}

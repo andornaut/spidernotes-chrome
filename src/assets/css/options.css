@@ -1,0 +1,142 @@
+@import url(base.css);
+
+BODY {
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 800px
+}
+
+FOOTER {
+    padding: 15px;
+    text-align: center;
+}
+
+FOOTER A {
+    color: #666;
+}
+
+H1 {
+    background: url('../img/icon64.png') no-repeat 30px 28px;
+    border-bottom: 1px solid #BBB;
+    line-height: 64px;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 28px 0 28px 115px;
+}
+
+H2 {
+    border-bottom: 1px solid #000;
+    color: #666;
+    font-size: 170%;
+    line-height: 40px;
+    margin-bottom: 20px;
+    margin-top: 0;
+    width: 100%;
+}
+
+H3 {
+    font-size: 100%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+HR {
+    border: 1px solid transparent;
+    margin: 20px 0;
+}
+
+SECTION {
+    padding: 30px 115px 30px 115px;
+}
+
+#synchronization {
+    background-color: #FCF5C8
+}
+
+#encryption {
+    background-color: #FBEEA5
+}
+
+#preferences {
+    background-color: #F8E48C;
+}
+
+#backup {
+    background-color: #F6DC73;
+}
+
+#backup INPUT[type=file] {
+    margin-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+}
+
+#encryption A.close {
+    display: none;
+}
+
+#synchronization FORM {
+    display: inline-block;
+    margin: 0 15px 10px 0;
+}
+
+#synchronization FORM BUTTON {
+    background: transparent;
+    border: 0 none;
+    height: 24px;
+    width: 24px;
+}
+
+#synchronization .profile {
+    font-size: 110%;
+    padding: 3px 5px 3px 32px;
+}
+
+#synchronization .profile.twitter,
+#synchronization .profile.yahoo {
+    line-height: 20px;
+}
+
+#synchronization .profile.yahoo {
+    background-position-x: 4px;
+    padding-left: 36px;
+}
+
+#synchronization .profile A {
+    display: inline-block;
+}
+
+#synchronization .profile IMG {
+    margin-left: 10px;
+    margin-right: -10px;
+}
+
+#synchronization .profile,
+#synchronization FORM {
+    background: url('../img/social.png') no-repeat;
+}
+
+.fa-download {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.facebook {
+    background-position: left top;
+}
+
+.google {
+    background-position: left -100px;
+}
+
+.windows_live {
+    background-position: left -200px;
+}
+
+.twitter {
+    background-position: left -300px;
+}
+
+.yahoo {
+    background-position: left -400px;
+}

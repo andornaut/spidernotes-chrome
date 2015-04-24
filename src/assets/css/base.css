@@ -1,0 +1,82 @@
+BODY {
+    color: #444;
+    font-family: "Lucida Grande", "Segoe UI", "Droid Sans", "Liberation Sans", arial, sans-serif;
+    margin: 0;
+}
+
+A {
+    color: #369;
+}
+
+BUTTON, INPUT, TEXTAREA {
+    padding: 4px;
+}
+
+INPUT, SELECT, TEXTAREA {
+    border: 1px solid #BBB;
+}
+
+INPUT {
+    font-size: 16px;
+}
+
+BUTTON:focus,
+INPUT:focus,
+TEXTAREA:focus {
+    outline-color: #529AE9;
+}
+
+BUTTON, H1, H2, NAV, .btn {
+    font-family: "Lucida Grande", "Segoe UI", "Droid Sans", "Liberation Sans", arial, sans-serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased; /* Fixes bold looking fonts on Mac OSX */
+}
+
+BLOCKQUOTE {
+    line-height: 150%;
+}
+
+DD {
+    margin-left: 0;
+}
+
+DL,
+P,
+UL {
+    line-height: 150%;
+    margin-top: 0;
+}
+
+P.password {
+    display: flex;
+}
+
+P.password INPUT {
+    flex-grow: 1;
+    margin-right: 6px;
+}
+
+.btn {
+    border: 0 none;
+    border-radius: 3px;
+    margin-right: 6px;
+    padding: 7px 12px;
+    vertical-align: top;
+}
+
+.btn, .btn:active, .btn:focus, .btn:hover {
+    background-color: #F1F1F1;
+    border: 1px solid #BBB;
+}
+
+.btn-danger, .btn-danger:active, .btn-danger:focus, .btn-danger:hover {
+    background-color: #CC5544;
+    border: 1px solid #993322;
+    color: #FFF;
+}
+
+.btn-primary, .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #5088DD;
+    border: 1px solid #336699;
+    color: #FFF;
+}
