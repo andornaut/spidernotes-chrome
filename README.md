@@ -1,12 +1,12 @@
 SpiderNotes - Google Chrome Extension
 =====================================
 
-SpiderNotes is a Google Chrome Extension that enables you to:
+SpiderNotes is a Google Chrome Extension that lets you:
 
-*   Conveniently take notes while you browse the web.
-*   Know when your notes link to the websites that you visit.
-*   Encrypt your notes for better privacy.
-*   Access your notes from multiple devices.
+* Conveniently take notes while you browse the web.
+* Know when your notes link to the websites that you visit.
+* Encrypt your notes for better privacy.
+* Access your notes from multiple devices.
 
 This repository is for the client-side component of the [SpiderNotes Google Chrome Extension][download]. The [Google App Engine component][spidernotes-gae] is hosted in a separate repository.
 
