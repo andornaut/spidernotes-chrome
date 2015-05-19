@@ -8,14 +8,15 @@ const POPOUT_URL = chrome.extension.getURL('popout.html');
 
 module.exports = {
     /**
-     * @param {!function} callback Function to invoke with the current tab.
+     * Call the callback function with the currently active tab or null.
+     * @param {!function} callback
      */
     getCurrentTab: function(callback) {
         chrome.tabs.query({
             active: true,
             currentWindow: true
-        }, function(tabArray) {
-            callback(tabArray[0]);
+        }, function(activeTabs) {
+            callback(activeTabs.length ? activeTabs[0] : null);
         });
     },
 
@@ -79,10 +80,10 @@ module.exports = {
 
     /**
      * Redirect the supplied tab to the options page.
-     * @param {!{id: number}} tab
+     * @param {!number} tabId
      */
-    navigateToOptions: function(tab) {
-        chrome.tabs.update(tab.id, { url: OPTIONS_URL });
+    navigateToOptions: function(tabId) {
+        chrome.tabs.update(tabId, { url: OPTIONS_URL });
     },
 
     /**
@@ -95,11 +96,11 @@ module.exports = {
 
     /**
      * Set the web browser toolbar icon's badge text.
-     * @param {!{id: number}} tab
+     * @param {!number} tabId
      * @param {!string} text Hex color code.
      */
-    setBadgeText: function(tab, text) {
-        chrome.browserAction.setBadgeText({ tabId: tab.id, text: text });
+    setBadgeText: function(tabId, text) {
+        chrome.browserAction.setBadgeText({ tabId: tabId, text: text });
     },
 
     /**

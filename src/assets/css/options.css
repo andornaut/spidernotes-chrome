@@ -113,7 +113,8 @@ SECTION {
 
 #synchronization .profile,
 #synchronization FORM {
-    background: url('../img/social.png') no-repeat;
+    background-image: url('../img/social.png');
+    background-repeat: no-repeat;
 }
 
 .fa-download {

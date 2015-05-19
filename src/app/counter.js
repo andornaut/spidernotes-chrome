@@ -18,7 +18,7 @@ module.exports = {
     /**
      * Return the number of notes that match the URL in the supplied tab.
      * Invoked when a Note event is triggered.
-     * @param {!Object} tab
+     * @param {!{id: !number, url: !string}} tab
      * @param {!module:models/Note} note
      * @return {!number}
      */
@@ -48,7 +48,7 @@ module.exports = {
     /**
      * Return the number of notes that match the URL in the supplied tab.
      * Invoked when a NoteCollection event is triggered.
-     * @param {!Object} tab
+     * @param {!{id: !number, url: string}} tab
      * @param {!module:models/NoteCollection} notes
      * @return {!number}
      */

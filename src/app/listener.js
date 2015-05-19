@@ -20,10 +20,17 @@ module.exports.listen = function(user, notes, synchronizer, started) {
      */
     var handleNoteChanged = function(note) {
         var callback = function(tab) {
-            var count = counter.countNote(tab, note);
-            var text = count ? count.toString() : '';
+            var count;
+            var text;
 
-            browser.setBadgeText(tab, text);
+            // Ignore tabs that don't have ids.
+            if (tab && tab.id) {
+                count = counter.countNote(tab, note);
+                text = count ? count.toString() : '';
+
+                browser.setBadgeText(tab.id, text);
+            }
+
         };
 
         browser.getCurrentTab(callback);
@@ -36,10 +43,16 @@ module.exports.listen = function(user, notes, synchronizer, started) {
      */
     var handleNotesReset = function(notes) {
         var callback = function(tab) {
-            var count = counter.countNotes(tab, notes);
-            var text = count ? count.toString() : '';
+            var count;
+            var text;
 
-            browser.setBadgeText(tab, text);
+            // Ignore tabs that don't have ids.
+            if (tab && tab.id) {
+                count = counter.countNotes(tab, notes);
+                text = count ? count.toString() : '';
+
+                browser.setBadgeText(tab.id, text);
+            }
         };
 
         browser.getCurrentTab(callback);
@@ -63,13 +76,16 @@ module.exports.listen = function(user, notes, synchronizer, started) {
      * @param {!Object} tab
      */
     var handleTabUpdated = function(tab) {
-        if (utils.isSocialCallbackUrl(tab.url)) {
-            user.fetch().always(function() {
-                synchronizer.syncAll();
-                browser.navigateToOptions(tab);
-            });
-        } else {
-            handleNotesReset(notes);
+        // Ignore tabs that don't have ids.
+        if (tab.id) {
+            if (utils.isSocialCallbackUrl(tab.url)) {
+                user.fetch().always(function() {
+                    synchronizer.syncAll();
+                    browser.navigateToOptions(tab.id);
+                });
+            } else {
+                handleNotesReset(notes);
+            }
         }
     };
 

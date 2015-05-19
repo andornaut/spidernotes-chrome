@@ -39,7 +39,6 @@ var app = {
             return notes.fetch({ reset: true })
                 .done(synchronizer.syncModified.bind(synchronizer));
         };
-
         /**
          * @type {module:models/NoteCollection}
          */
@@ -84,15 +83,12 @@ var app = {
     startPopup: function(window) {
         this.started_.always(function() {
             browser.getCurrentTab(function(tab) {
-                popup(window, this, tab.url);
+                popup(window, this, tab ? tab.url : '');
             }.bind(this));
 
             this.synchronizer.syncPeriodically();
         }.bind(this));
     }
 };
-
-// Start the application.
-app.start();
 
 module.exports = app;

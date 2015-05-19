@@ -76,7 +76,7 @@ gulp.task('replaceManifest', function() {
 });
 
 function app(shouldMinify) {
-    return browserify('./src/app')
+    return browserify()
         .require('./src/app', { expose: 'app' })
         .bundle()
         .pipe(source('app.js'))
