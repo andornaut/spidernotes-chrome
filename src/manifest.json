@@ -25,9 +25,8 @@
   "offline_enabled": true,
   "options_page": "options.html",
   "permissions": [
-    "https://spider-notes.appspot.com/",
     "storage",
     "tabs"
   ],
-  "version": "1.0.2"
+  "version": "1.0.3"
 }
