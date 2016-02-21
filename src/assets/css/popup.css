@@ -72,6 +72,7 @@ ARTICLE PRE {
     padding: 0 5px;
     overflow: hidden;
     white-space: pre-wrap;
+    word-break: break-all;
 }
 
 ARTICLE SPAN {
