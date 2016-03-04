@@ -59,11 +59,10 @@ module.exports.listen = function(user, notes, synchronizer, started) {
     };
 
     /**
-     * Respond to extension-installed events: navigate to the welcome page.
+     * Respond to extension-installed events.
      */
     var handleInstalled = function() {
         started.always(notes.createWelcomeNotes.bind(notes));
-        browser.openTab(utils.welcome_url);
     };
 
     /**

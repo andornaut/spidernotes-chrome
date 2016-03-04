@@ -41,7 +41,7 @@
   "directories": {
     "doc": "docs"
   },
-  "homepage": "https://spidernotes.com",
+  "homepage": "https://github.com/andornaut/spidernotes-chrome",
   "license": "MIT",
   "main": "./src/app",
   "name": "spidernotes-chrome",

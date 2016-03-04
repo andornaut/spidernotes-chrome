@@ -8,7 +8,6 @@ const EXTRACT_HOSTNAME_AND_LOWER_REGEX = /^\s*(?:(?:[\w-]+:\/\/)?(\/?[\w-]+(?:\.
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const STRIP_COMMA_REGEX = /(^,)|(,$)/g;
 const STRIP_SCHEME_REGEX = /^\s*(?:[\w-]+:\/\/)?(.*)/i;
-const WELCOME_URL = 'https://spidernotes.com/welcome/chrome';
 const WORD_DELIMITER_REGEX = /[,\s]+/g;
 
 /**
@@ -44,8 +43,6 @@ function getTime(dt) {
 }
 
 module.exports = {
-    welcome_url: WELCOME_URL,
-
     /**
      * Return a human-readable text representation of the supplied timestamp.
      * @param {!Date} dt

@@ -90,7 +90,7 @@ module.exports = Backbone.Collection.extend(/** @lends module:models/NoteCollect
         this.create({
             id: 'welcome',
             body: welcomeTemplate({}),
-            url: utils.welcome_url,
+            url: 'welcome',
             created: now,
             modified: now
         });
