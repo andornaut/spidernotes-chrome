@@ -17,5 +17,6 @@ This repository is for the client-side code. The [Google App Engine code][spider
 [MIT][license].
 
 [download]: https://chrome.google.com/webstore/detail/spidernotes/mgghkmeinhhcldkigpioebfjfghdeofl
+[license]: /LICENSE
 [screenshot-image]: /resources/screenshot-0.png
 [spidernotes-gae]: https://github.com/andornaut/spidernotes-gae
